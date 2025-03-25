@@ -1,10 +1,17 @@
 import yt_dlp
 import sys
+import os
 
-def download_video(video_url):
+# Parametrelerin doğru olduğundan emin olalım
+if len(sys.argv) < 3:
+    print("Eksik parametre! Lütfen video URL'sini ve kaydedilecek dosya yolunu belirtin.")
+    print(f"Geçerli parametreler: {len(sys.argv)}")
+    sys.exit(1)
+
+def download_video(video_url, download_path):
     ydl_opts = {
         'format': 'bv+ba/b',  # Best video ve best audio'yu indir ve birleştir
-        'outtmpl': 'Videos/downloaded_video.%(ext)s',
+        'outtmpl': download_path,  # Video kaydetme yolu
         'merge_output_format': 'mp4',  # Birleştirilen dosyanın formatı
         'postprocessors': [{
             'key': 'FFmpegVideoConvertor',
@@ -21,6 +28,6 @@ def download_video(video_url):
         ydl.download([video_url])
 
 if __name__ == "__main__":
-    video_url = sys.argv[1]  # Express'ten gelen URL
-    download_video(video_url)
-# https://www.youtube.com/watch?v=cWU9NM5uC6s&t=3s
+    video_url = sys.argv[1]  # Komut satırından gelen video URL'si
+    download_path = sys.argv[2]  # Komut satırından gelen video kaydetme yolu
+    download_video(video_url, download_path)
