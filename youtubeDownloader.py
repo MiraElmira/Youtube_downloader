@@ -1,6 +1,5 @@
 import yt_dlp
 import sys
-import os
 
 # Parametrelerin doğru olduğundan emin olalım
 if len(sys.argv) < 3:
