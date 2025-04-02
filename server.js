@@ -5,8 +5,7 @@ const uuid = require("uuid");
 const app = express();
 const cors = require("cors");
 const fs = require("fs");
-const dotenv = require('dotenv')
-.config();
+const dotenv = require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
@@ -15,13 +14,17 @@ app.use("/Back/Videos", express.static(path.join(__dirname, "Videos")));  // Ser
 // Video download process
 app.post("/download", (req, res) => {
   const videoUrl = req.body.url;
+  const formatType = req.body.format || "mp4"; // Varsayılan format mp4
+  const fileExtension = formatType === "mp3" ? "mp3" : "mp4";
 
-  // Generating a unique file name
-  const videoName = `${uuid.v4()}.mp4`;  
-  const downloadPath = path.join(__dirname, "Videos", videoName);
+  // Benzersiz dosya adı oluşturuyoruz (uzantı eklemiyoruz)
+  const videoNameBase = uuid.v4();
+  const downloadPath = path.join(__dirname, "Videos", videoNameBase);
+  // Son dosya adını oluşturuyoruz: base + uzantı
+  const finalFileName = `${videoNameBase}.${fileExtension}`;
 
-  // Running Python script to download video
-  exec(`python youtubeDownloader.py "${videoUrl}" "${downloadPath}"`, (error, stdout, stderr) => {
+  // Python betiğini çalıştırıyoruz
+  exec(`python youtubeDownloader.py "${videoUrl}" "${downloadPath}" "${formatType}"`, (error, stdout, stderr) => {
     if (error) {
       console.error(`Execution error: ${error}`);
       console.error(`stderr: ${stderr}`);
@@ -30,21 +33,22 @@ app.post("/download", (req, res) => {
     }
 
     console.log(stdout);  // Logging output to console
-    // If the video is successfully downloaded, return the video URL
-    res.json({ videoUrl: `/Back/Videos/${videoName}` });
+    // Eğer video başarıyla indirildiyse, video URL'sini gönderiyoruz
+    res.json({ videoUrl: `/Back/Videos/${finalFileName}` });
 
-    // Delete video file after 5 minutes
+    // 5 dakika sonra dosyayı sil
     setTimeout(() => {
-      if (fs.existsSync(downloadPath)) {
-        fs.unlink(downloadPath, (err) => {
+      const fullPath = path.join(__dirname, "Videos", finalFileName);
+      if (fs.existsSync(fullPath)) {
+        fs.unlink(fullPath, (err) => {
           if (err) {
             console.error(`File deletion error: ${err}`);
           } else {
-            console.log(`Video file successfully deleted: ${downloadPath}`);
+            console.log(`Video file successfully deleted: ${fullPath}`);
           }
         });
       }
-    }, 5 * 60 * 1000); // 5 minutes = 300,000 ms
+    }, 5 * 60 * 1000);
   });
 });
 
