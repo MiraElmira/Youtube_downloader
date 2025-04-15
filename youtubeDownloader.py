@@ -8,12 +8,12 @@ if len(sys.argv) < 4:
 
 def download_video(video_url, base_path, format_type):
     ffmpeg_path = 'C:/ffmpeg-7.1.1-full_build/bin/ffmpeg.exe'
+    cookies_path = 'cookies.txt'  # cookies dosyasını buraya yazdık
     ydl_opts = {}
 
     if format_type == 'mp3':
         ydl_opts = {
-            'username': 'mira.elmira1111@gmail.com',
-            'password':'5PTi0Cgk',
+            'cookies': cookies_path,
             'format': 'bestaudio',
             'outtmpl': base_path + '.%(ext)s',
             'postprocessors': [{
@@ -25,17 +25,14 @@ def download_video(video_url, base_path, format_type):
             'verbose': True,
         }
     elif format_type == 'mp4':
- 
         ydl_opts = {
-        'username': 'mira.elmira1111@gmail.com',
-        'password':'5PTi0Cgk',
-        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]',
-        'outtmpl': base_path + '.mp4',
-        'ffmpeg_location': ffmpeg_path,
-        'merge_output_format': 'mp4',
-        'verbose': True
-    }
-
+            'cookies': cookies_path,
+            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]',
+            'outtmpl': base_path + '.mp4',
+            'ffmpeg_location': ffmpeg_path,
+            'merge_output_format': 'mp4',
+            'verbose': True,
+        }
     else:
         print("Desteklenmeyen format! 'mp3' veya 'mp4' belirtin.")
         sys.exit(1)

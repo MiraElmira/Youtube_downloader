@@ -1,0 +1,14 @@
+__Secure-1PSID	g.a000wAgCuJnoReJpQn9QSgeDT_-YwBZm5X61kXxoM1bQHKs8qzHJ3sqNELbgyjsMUCjasAq6zwACgYKAYwSARcSFQHGX2MiPJfrGKbTl-Ieyx6J4uZZ0hoVAUF8yKqIAeKTSoQnX5CgYV2z7Q8Z0076	.youtube.com	/	2026-05-20T19:38:19.323Z	167	✓	✓				High	
+__Secure-1PAPISID	qixL8csvugss7nlT/AfL92XvUy6U26bIbd	.youtube.com	/	2026-05-20T19:38:19.323Z	51		✓				High	
+YSC	IDiO-U3rNcU	.youtube.com	/	Session	14	✓	✓	None	https://youtube.com		Medium	
+VISITOR_PRIVACY_METADATA	CgJBWhIEGgAgYQ%3D%3D	.youtube.com	/	2025-10-12T19:38:46.806Z	44	✓	✓	None	https://youtube.com		Medium	
+VISITOR_INFO1_LIVE	LIajoSZVNZ4	.youtube.com	/	2025-10-12T19:38:46.806Z	29	✓	✓	None	https://youtube.com		Medium	
+SSID	AyS6tt9Bo4Xt1muLM	.youtube.com	/	2026-05-20T19:38:19.323Z	21	✓	✓				High	
+SIDCC	AKEyXzUmBHzCUk5HDvRpd_qFxr31dkfhjIXfSnHGK2uN7fAsm7SqCx-OjR5-l6_CAyaYnho-	.youtube.com	/	2026-04-15T19:38:46.806Z	77						High	
+SID	g.a000wAgCuJnoReJpQn9QSgeDT_-YwBZm5X61kXxoM1bQHKs8qzHJDO953_ITCV4v9YdKyulK_AACgYKAUISARcSFQHGX2Mii-J7v_NJtvr_YILkc_1zzhoVAUF8yKqpGCkF2_K-HJj9vKfO5JqJ0076	.youtube.com	/	2026-05-20T19:38:19.322Z	156						High	
+SAPISID	qixL8csvugss7nlT/AfL92XvUy6U26bIbd	.youtube.com	/	2026-05-20T19:38:19.323Z	41		✓				High	
+PREF	f6=40000000&tz=Asia.Baku&f7=100	.youtube.com	/	2026-05-20T19:38:41.627Z	35		✓				Medium	
+LOGIN_INFO	AFmmF2swRQIhAINFtE1GNRi32VoUt4fyNqSmOhXJTFhVSOCQXEGHVFAcAiBwcVsllCV-nfz4UyNljmNsZjGR_r0cuJDzR2C6dZgfMg:QUQ3MjNmelVEU0NBN0xiVk9JeTEzSEVtY3V0YzY4U0tubnZfcTZiSkxIbUV6T0JTU0g2MXU3ZUV6LWlBQnZZZUNBbzhyQjN3VTU4ZXdjRUNBMllFN3o4M05kYkZuSmpEYTVVdzYyY3RQb0p2MjM1UG5iNXdBX3d3Q3FPZF9KQWxvb3JtaXN3dWh3RmU4LWtUM196aXMyOGowMnRQQVA4SGh3	.youtube.com	/	2026-05-20T19:38:19.855Z	329	✓	✓	None			Medium	
+HSID	A_q-s1BKOojp0qN2f	.youtube.com	/	2026-05-20T19:38:19.323Z	21	✓					High	
+CONSISTENCY	AKreu9u-HBHbRlRwF0-1QlyLDyIv1kgXdVzkevFpu0WK9wVeLTFydNcneyXUXwDoc0iuiJ93sSwKmmsDChztlVpG9tbRi5i9blkOjHqGCFnxKLg7cEyVMpTf3NDNm59rQVvDMbV3i1B5eaYUoqH0_-GdUPJavC2f6YqzEnrkp9QNJlSAWKj9ZndmJW4yPYX-NGoRA_v1mxajmhT5j7MnShnhqUzNJnj27A	.youtube.com	/	2025-04-15T19:48:37.000Z	237		✓				Medium	
+APISID	nE-qwyh0tuLgF6-G/A7TujaZT4crI8MVdA	.youtube.com	/	2026-05-20T19:38:19.323Z	40						High	
