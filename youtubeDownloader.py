@@ -12,6 +12,8 @@ def download_video(video_url, base_path, format_type):
 
     if format_type == 'mp3':
         ydl_opts = {
+            'username': 'mira.elmira1111@gmail.com',
+            'password':'5PTi0Cgk',
             'format': 'bestaudio',
             'outtmpl': base_path + '.%(ext)s',
             'postprocessors': [{
@@ -25,6 +27,8 @@ def download_video(video_url, base_path, format_type):
     elif format_type == 'mp4':
  
         ydl_opts = {
+        'username': 'mira.elmira1111@gmail.com',
+        'password':'5PTi0Cgk',
         'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]',
         'outtmpl': base_path + '.mp4',
         'ffmpeg_location': ffmpeg_path,
