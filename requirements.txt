@@ -1,2 +1,4 @@
 yt-dlp==2023.11.16  # YouTube'dan indirme için
 ffmpeg-python==0.2.0  # FFmpeg entegrasyonu için (opsiyonel)
+Flask
+flask-cors
